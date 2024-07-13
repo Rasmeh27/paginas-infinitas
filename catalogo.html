@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="catalogo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/logo.png" class="header__logo" />
+        <nav class="header__menu">
+            <a href="/index.html" class="header__menu__link"> ← Regresar</a>
+            <a class="header__menu__link">Carrito</a>
+            <a class="header__menu__link">Perfil</a>
+            <div class="header__menu__button">
+                <button class="header__menu__div__button" onclick="alertLogin();">Iniciar sesion</button>
+                <button class="header__menu__div__button__2" onclick="alertMessege();">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+    <hr class="divider">
+
+    <main class="catalogo">
+        <h1 class="catalogo__titulo">Catálogo de libros</h1>
+        <h3 class="catalogo__subtitulo">Diferentes géneros</h2>
+
+            <div class="catalogo__caja__grande1">
+                <div class="catalogo__libros__item">
+                    <img src="images/books/theLordOfRing.jpg" alt="theLordOfRing" class="catalogo__libros__imagen" />
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">
+                            El Señor de los Anillos
+                        </h1>
+                        <p class="catalogo__libros__info__detalles">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+                            reprehenderit necessitatibus. Eius ex praesentium nihil rem
+                            necessitatibus consequatur velit, pariatur dolor beatae aliquam!
+                            Explicabo quos consequatur, asperiores obcaecati modi sed!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="catalogo__libros__item">
+                    <img src="images/books/leyesIdispensables.jpg" alt="leyesIdispensables"
+                        class="catalogo__libros__imagen">
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">Las 15 leyes indispensables del crecimiento</h1>
+                        <p class="catalogo__libros__info__detalles">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Provident, natus repellendus? Illum voluptate, quae ipsum minus perferendis dolorum quisquam
+                            sed
+                            tempora? Asperiores reprehenderit aliquam, exercitationem magnam placeat officia neque
+                            animi!</p>
+                    </div>
+                </div>
+
+                <div class="catalogo__libros__item">
+                    <img src="images/books/amorSexoNoviazgo.jpg" alt="amorSexoNoviazgo"
+                        class="catalogo__libros__imagen">
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">Amor, Sexo y Noviazgo</h1>
+                        <p class="catalogo__libros__info__detalles">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Provident, natus repellendus? Illum voluptate, quae ipsum minus perferendis dolorum quisquam
+                            sed
+                            tempora? Asperiores reprehenderit aliquam, exercitationem magnam placeat officia neque
+                            animi!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalogo__caja__grande2">
+                <div class="catalogo__libros__1">
+                    <img src="images/books/cienAniosDeSoledad.jpeg" alt="cienAniosDeSoledad"
+                        class="catalogo__libros__imagen">
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">Cien Años de Soledad</h1>
+                        <p class="catalogo__libros__info__detalles">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Provident, natus repellendus? Illum voluptate, quae ipsum minus perferendis dolorum quisquam
+                            sed
+                            tempora? Asperiores reprehenderit aliquam, exercitationem magnam placeat officia neque
+                            animi!</p>
+                    </div>
+                </div>
+
+                <div class="catalogo__libros__1">
+                    <img src="images/books/harryPotter.jpeg" alt="harryPotter" class="catalogo__libros__imagen">
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">Harry Potter</h1>
+                        <p class="catalogo__libros__info__detalles">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Provident, natus repellendus? Illum voluptate, quae ipsum minus perferendis dolorum quisquam
+                            sed
+                            tempora? Asperiores reprehenderit aliquam, exercitationem magnam placeat officia neque
+                            animi!</p>
+                    </div>
+                </div>
+
+                <div class="catalogo__libros__1">
+                    <img src="images/books/power.png" alt="leyesDelPoder" class="catalogo__libros__imagen">
+                    <div class="catalogo__libros__info">
+                        <h1 class="catalogo__libros__info__titulo">Las 48 leyes del Poder</h1>
+                        <p class="catalogo__libros__info__detalles">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Provident, natus repellendus? Illum voluptate, quae ipsum minus perferendis dolorum quisquam
+                            sed
+                            tempora? Asperiores reprehenderit aliquam, exercitationem magnam placeat officia neque
+                            animi!</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <hr class="divider">
+    <footer class="footer">
+      <p class="footer__redes">Redes sociales:</p>
+      <a href="https://github.com/Rasmeh27">
+          <img src="images/Icons/github.png" class="footer__img">
+      </a>
+      <a href="https://www.instagram.com/luis_h.r_/">
+          <img src="images/Icons/logotipo-de-instagram.png" class="footer__img">
+      </a>
+      <p class="footer__marca">Desarrollado por &copy;Luis Herasme</p> 
+    </footer>
+</body>
+<script src="/app.js"></script>
+</html>
