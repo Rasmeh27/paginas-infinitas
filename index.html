@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="home.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
-  <body>
-    <header class="header">
-        <img src="images/logo.png" class="header__logo">
-      <nav class="header__menu">
-        <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
-        <a class="header__menu__link">Carrito</a>
-        <a class="header__menu__link">Perfil</a>
-        <div class="header__menu__button">
-            <button class="header__menu__div__button" onclick="alertLogin();">Iniciar sesion</button>
-            <button class="header__menu__div__button__2" onclick="alertMessege();">Registrarse</button>
-        </div> 
-      </nav>
-    </header>
-    <hr class="divider">
-      <main class="home">
-        <div class="image__container">
-            <img src="images/books/sherlockHolmes.jfif" class="home__contenido__imagen">
-            <div class="overlay">Ver mas</div>
-        </div>
-        <section class="home__contenido">
-          <h1 class="home__conteindo__titulo">Las Aventuras de Sherlock Holmes</h1>
-          <h1 class="home__contenido__precio">$50</h1>
-          <h3 class="home__contenido__autor">Autor: Arthur Conan Doyle</h3>
-          <button class="home__contenido__carrito">Agregar al carrito</button>
-          <button class="home__contenido__comprar">Comprar</button>
-          <div>
-            <h4 class="home__contenido__titulo__descripcion">Las Aventuras de Sherlock Holmes</h4>
-            <p class="home__contenido__descripcion">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum sit
-                pariatur nostrum maiores voluptatibus, dicta ad eligendi id
-                exercitationem, magnam quae numquam adipisci quidem dolorem. Aut eum
-                maxime minima dolores!
-              </p>
-          </div>
-        </section>
-        
-      </main>
-      <hr class="divider">
-      <footer class="footer">
-        <p class="footer__redes">Redes sociales:</p>
-        <a href="https://github.com/Rasmeh27">
-            <img src="images/Icons/github.png" class="footer__img">
-        </a>
-        <a href="https://www.instagram.com/luis_h.r_/">
-            <img src="images/Icons/logotipo-de-instagram.png" class="footer__img">
-        </a>
-        <p class="footer__marca">Desarrollado por &copy;Luis Herasme</p> 
-      </footer>
-  </body>
-  <script src="/app.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header class="header">
+    <img src="images/logo.png" class="header__logo">
+    <nav class="header__menu">
+      <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
+      <a class="header__menu__link">Carrito</a>
+      <a class="header__menu__link">Perfil</a>
+      <div class="header__menu__button">
+        <button class="header__menu__div__button" onclick="alertLogin();">Iniciar sesion</button>
+        <button class="header__menu__div__button__2" onclick="alertMessege();">Registrarse</button>
+      </div>
+    </nav>
+  </header>
+  <hr class="divider">
+  <main class="home">
+    <div class="image__container">
+      <img src="images/books/sherlockHolmes.jpg" class="home__contenido__imagen active">
+      <div class="overlay">Ver mas</div>
+    </div>
+    <section class="home__contenido">
+      <h1 class="home__conteindo__titulo fade active">Las Aventuras de Sherlock Holmes</h1>
+      <h1 class="home__contenido__precio">$50</h1>
+      <h3 class="home__contenido__autor fade active">Autor: Arthur Conan Doyle</h3>
+      <button class="home__contenido__carrito" onclick="addShoppingCart();">Agregar al carrito</button>
+      <button class="home__contenido__comprar" onclick="purshase();">Comprar</button>
+      <div>
+        <h4 class="home__contenido__titulo__descripcion fade active">Las Aventuras de Sherlock Holmes</h4>
+        <p class="home__contenido__descripcion fade active">
+          "Las Aventuras de Sherlock Holmes" es una colección de doce relatos cortos escritos por Arthur Conan Doyle,
+          que presenta las ingeniosas y cautivadoras historias del detective más famoso del mundo, Sherlock Holmes, y su
+          fiel amigo, el Dr. John Watson.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <hr class="divider">
+  <footer class="footer">
+    <p class="footer__redes">Redes sociales:</p>
+    <a href="https://github.com/Rasmeh27">
+      <img src="images/Icons/github.png" class="footer__img">
+    </a>
+    <a href="https://www.instagram.com/luis_h.r_/">
+      <img src="images/Icons/logotipo-de-instagram.png" class="footer__img">
+    </a>
+    <p class="footer__marca">Desarrollado por &copy;Luis Herasme</p>
+  </footer>
+</body>
+<script src="/app.js"></script>
+
 </html>
