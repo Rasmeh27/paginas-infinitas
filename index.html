@@ -14,6 +14,7 @@
   <header class="header">
     <img src="images/logo.png" class="header__logo">
     <nav class="header__menu">
+      <a href="/index.html" class="header__menu__link">Home</a>
       <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
       <a class="header__menu__link">Carrito</a>
       <a class="header__menu__link">Perfil</a>
@@ -24,17 +25,16 @@
     </nav>
   </header>
   <hr class="divider">
+  </div>
   <main class="home">
     <div class="image__container">
       <img src="images/books/sherlockHolmes.jpg" class="home__contenido__imagen active">
-      <div class="overlay">Ver mas</div>
+      <div class="overlay"><a href="/catalogo.html" class="overlay__link">Ver mas</a></div>
     </div>
     <section class="home__contenido">
       <h1 class="home__conteindo__titulo fade active">Las Aventuras de Sherlock Holmes</h1>
-      <h1 class="home__contenido__precio">$50</h1>
+      <h1 class="home__contenido__precio">$50.00</h1>
       <h3 class="home__contenido__autor fade active">Autor: Arthur Conan Doyle</h3>
-      <button class="home__contenido__carrito" onclick="addShoppingCart();">Agregar al carrito</button>
-      <button class="home__contenido__comprar" onclick="purshase();">Comprar</button>
       <div>
         <h4 class="home__contenido__titulo__descripcion fade active">Las Aventuras de Sherlock Holmes</h4>
         <p class="home__contenido__descripcion fade active">

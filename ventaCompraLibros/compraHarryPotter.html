@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprar</title>
+    <link rel="stylesheet" href="/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/images/logo.png" class="header__logo">
+        <nav class="header__menu">
+            <a href="/index.html" class="header__menu__link">← Home</a>
+            <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
+            <a class="header__menu__link">Carrito</a>
+            <a class="header__menu__link">Perfil</a>
+            <div class="header__menu__button">
+                <button class="header__menu__div__button" onclick="alertLogin();">Iniciar sesion</button>
+                <button class="header__menu__div__button__2" onclick="alertMessege();">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+    <hr class="divider">
+    <main class="home">
+        <div class="image__container">
+            <img src="/images/books/harryPotter.jpg" class="home__contenido__imagen active">
+            <div class="overlay"><a href="/catalogo.html" class="overlay__link">Ver mas</a></div>
+        </div>
+        <section class="home__contenido">
+            <h1 class="home__conteindo__titulo fade active">Harry Potter: El Legado Maldito</h1>
+            <h1 class="home__contenido__precio">$50.00</h1>
+            <h3 class="home__contenido__autor fade active">Autor: J.K. Rowling</h3>
+            <button class="home__contenido__carrito" onclick="addShoppingCart();">Agregar al carrito</button>
+            <button class="home__contenido__comprar" onclick="purshase();">Comprar</button>
+            <div>
+                <h4 class="home__contenido__titulo__descripcion fade active">Harry Potter: El Legado Maldito</h4>
+                <p class="home__contenido__descripcion fade active">
+                    Harry Potter es una serie de novelas fantásticas escritas por la autora británica J. K. Rowling.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <hr class="divider">
+    <footer class="footer">
+        <p class="footer__redes">Redes sociales:</p>
+        <a href="https://github.com/Rasmeh27">
+            <img src="/images/Icons/github.png" class="footer__img">
+        </a>
+        <a href="https://www.instagram.com/luis_h.r_/">
+            <img src="/images/Icons/logotipo-de-instagram.png" class="footer__img">
+        </a>
+        <p class="footer__marca">Desarrollado por &copy;Luis Herasme</p>
+    </footer>
+</body>
+
+<script src="/compra.js"></script>
+
+</html>

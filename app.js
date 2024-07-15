@@ -136,11 +136,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const titles = [
         "Las Aventuras de Sherlock Holmes",
-        "El Señor de los Anillos",
+        "El Señor de los Anillos: La Comunidad del Anillo",
         "Las 15 Leyes Indispensables del Crecimiento",
         "Amor, Sexo y Noviazgo",
         "Cien Años de Soledad",
-        "Harry Potter: El legado Oscuro",
+        "Harry Potter: El Legado Maldito",
         "Las 48 Leyes del Poder"
     ];
 
@@ -151,7 +151,18 @@ document.addEventListener("DOMContentLoaded", function () {
         "Timothy Keller",
         "Gabriel García Márquez",
         "J.K. Rowling",
-        "Eckhart Tolle"
+        "Robert Greene"
+    ];
+
+    const prices = [
+        "$50.00",
+        "$35.00",
+        "$45.00",
+        "$50.00",
+        "$50.00",
+        "$45.00",
+        "$60.00"
+
     ];
 
     const descriptions = [
@@ -192,6 +203,8 @@ document.addEventListener("DOMContentLoaded", function () {
         authorElement.classList.remove("active");
         descriptionTitleElement.classList.remove("active");
         descriptionElement.classList.remove("active");
+        priceElement = document.querySelector(".home__contenido__precio");
+        priceElement.textContent = prices[currentImageIndex];
 
         setTimeout(() => {
             titleElement.textContent = titles[currentImageIndex];

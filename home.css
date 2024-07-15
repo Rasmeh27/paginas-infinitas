@@ -97,7 +97,7 @@
 }
 
 .home__conteindo__titulo {
-  font-size: 29px;
+  font-size: 58px;
   font-weight: 387;
   font-family: var(--fuente--rubik);
 }
@@ -117,7 +117,7 @@
 .home__contenido__autor {
   font-family: var(--fuente--rubik);
   color: gray;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -150,12 +150,12 @@
 }
 
 .home__contenido__titulo__descripcion {
-  font-size: 16px;
+  font-size: 20px;
   font-family: var(--fuente--poppins);
 }
 
 .home__contenido__descripcion {
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
   font-family: var(--fuente--rubik);
 }
@@ -198,6 +198,11 @@
   padding: 10px;
   border-radius: 5px;
   z-index: 1;
+}
+
+.overlay__link {
+  text-decoration: none;
+  color: white;
 }
 
 .image__container:hover .overlay {
