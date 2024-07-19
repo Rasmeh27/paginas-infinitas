@@ -63,15 +63,6 @@ async function alertLogin() {
     }
 }
 
-// Add to shopping cart 
-
-async function addShoppingCart() {
-    Swal.fire({
-        title: "Agregado al carrito",
-        icon: "success"
-    });
-}
-
 // Purshase - only example 
 async function purshase() {
     Swal.fire({
@@ -122,3 +113,68 @@ async function purshase() {
 
 
 // Compra de libros actualizando informacion 
+document.addEventListener("DOMContentLoaded", function () {
+    const carrito = document.getElementById('carrito');
+    const carritoMenu = document.getElementById('carrito__menu');
+    const carritoProductos = document.getElementById('carrito__menu__productos');
+    const carritoTotal = document.getElementById('carrito__total');
+    let productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+    let total = 0;
+
+    carrito.addEventListener('click', function () {
+        carritoMenu.style.display = carritoMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.addShoppingCart = async function (nombre, precio, imagen) {
+        const producto = {
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen
+        };
+
+        productosEnCarrito.push(producto);
+        actualizarCarrito();
+
+        await Swal.fire({
+            title: "Agregado al carrito",
+            text: `${nombre} ha sido agregado correctamente`,
+            icon: "success"
+        });
+    };
+
+    function actualizarCarrito() {
+        carritoProductos.innerHTML = '';
+        total = 0;
+
+        productosEnCarrito.forEach((producto, index) => {
+            total += producto.precio;
+
+            const li = document.createElement('li');
+            li.classList.add('carrito__producto');
+
+            const img = document.createElement('img');
+            img.src = producto.imagen;
+            img.classList.add('carrito__producto__imagen');
+
+            const span = document.createElement('span');
+            span.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
+
+            const botonEliminar = document.createElement('button');
+            botonEliminar.innerHTML = '<i class="fas fa-times"></i>';
+            botonEliminar.onclick = function () {
+                productosEnCarrito.splice(index, 1);
+                actualizarCarrito();
+            };
+
+            li.appendChild(img);
+            li.appendChild(span);
+            li.appendChild(botonEliminar);
+            carritoProductos.appendChild(li);
+        });
+
+        carritoTotal.textContent = `Total: $${total.toFixed(2)}`;
+        localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
+    }
+
+    actualizarCarrito();
+});

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comprar</title>
     <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/"></script>
 </head>
@@ -15,9 +16,16 @@
     <header class="header">
         <img src="/images/logo.png" class="header__logo">
         <nav class="header__menu">
-            <a href="/index.html" class="header__menu__link">← Home</a>
+            <a href="/index.html" class="header__menu__link"><img src="/images/Icons/home.png" class="icon"></a>
             <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
-            <a class="header__menu__link">Carrito</a>
+
+            <a class="header__menu__link" id="carrito"><img src="/images/Icons/shopping-cart.png" class="icon"></a>
+            <div class="carrito__menu" id="carrito__menu">
+                <h3>Productos en carrito</h3>
+                <ul id="carrito__menu__productos"></ul>
+                <p id="carrito__total">Total: $0.00</p>
+            </div>
+
             <a class="header__menu__link">Perfil</a>
             <div class="header__menu__button">
                 <button class="header__menu__div__button" onclick="alertLogin();">Iniciar sesion</button>
@@ -35,7 +43,9 @@
             <h1 class="home__conteindo__titulo fade active">Las 48 Leyes del Poder</h1>
             <h1 class="home__contenido__precio">$60.00</h1>
             <h3 class="home__contenido__autor fade active">Autor: Robert Greene</h3>
-            <button class="home__contenido__carrito" onclick="addShoppingCart();">Agregar al carrito</button>
+            <button class="home__contenido__carrito"
+                onclick="addShoppingCart('Las 48 Leyes del Poder', 60.00, '/images/books/power.jpg');">Agregar
+                al carrito</button>
             <button class="home__contenido__comprar" onclick="purshase();">Comprar</button>
             <div>
                 <h4 class="home__contenido__titulo__descripcion fade active">Las 48 Leyes del Poder
