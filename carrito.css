@@ -88,3 +88,12 @@
 #carrito__comprar:hover {
   background-color: gray;
 }
+
+@media (max-width: 668px) {
+  .header__menu__div__button {
+    display: none;
+  }
+  .header__menu__div__button__2 {
+    display: none;
+  }
+}

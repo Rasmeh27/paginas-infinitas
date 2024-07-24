@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function actualizarCarrito() {
         carritoProductos.innerHTML = '';
-        let total = 0;
+        total = 0;
 
         productosEnCarrito.forEach((producto, index) => {
             total += producto.precio;
@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             botonEliminar.onclick = function () {
                 productosEnCarrito.splice(index, 1);
                 actualizarCarrito();
-                localStorage.setItem('productosEnCarrito', JSON.stringify(
-                    productosEnCarrito));
+                localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
             };
 
             li.appendChild(img);
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         carritoTotal.textContent = `Total: $${total.toFixed(2)}`;
-    };
+    }
 
     carritoComprar.onclick = function () {
         if (productosEnCarrito.length > 0) {
@@ -53,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 icon: "success"
             });
             productosEnCarrito = [];
+            localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
             actualizarCarrito();
         } else {
             Swal.fire({
@@ -62,5 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     };
+
     actualizarCarrito();
 });

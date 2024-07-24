@@ -414,3 +414,122 @@
 .fade.active {
   opacity: 1;
 }
+
+/* Responsive */
+@media (max-width: 1152px) {
+  .header {
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+  }
+  .header__logo {
+    display: none;
+  }
+
+  .header__menu__link {
+    font-size: 12px;
+  }
+
+  .carrito__menu {
+    margin-right: 5px;
+    margin-bottom: 40px;
+    padding: 5%;
+    width: 45%;
+  }
+
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+  }
+
+  .image__container {
+    width: 30%;
+    margin-right: 90px;
+    padding-bottom: 10%;
+  }
+
+  .home__conteindo__titulo {
+    font-size: 25px;
+  }
+  .home__contenido__precio {
+    font-size: 15px;
+  }
+  .home__contenido__autor {
+    font-size: 10px;
+  }
+  .home__contenido__titulo__descripcion {
+    font-size: 12px;
+  }
+  .home__contenido__descripcion {
+    font-size: 10px;
+  }
+
+  .home__contenido__carrito {
+    width: auto;
+  }
+  .home__contenido__comprar {
+    width: auto;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+  }
+  .footer__img {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 30px;
+  }
+  .footer__marca {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 477px) {
+  .header {
+    flex-direction: column;
+    padding: 3%;
+    justify-content: center;
+  }
+  .header__logo {
+    display: none;
+  }
+
+  .header__menu__link {
+    font-size: 12px;
+    width: auto;
+  }
+  .header__menu__div__button {
+    width: 70px;
+    font-size: 8px;
+  }
+  .header__menu__div__button__2 {
+    width: 70px;
+    font-size: 8px;
+  }
+  .home__contenido__carrito {
+    width: auto;
+  }
+  .home__contenido__comprar {
+    width: auto;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+  }
+  .footer__img {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 20px;
+  }
+  .footer__marca {
+    font-size: 10px;
+  }
+}

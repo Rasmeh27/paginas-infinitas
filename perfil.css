@@ -65,3 +65,23 @@ h2 {
 .profile__section__button:hover {
   background-color: gray;
 }
+
+@media (max-width: 931px) {
+  .header__menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 900px;
+    padding: 5%;
+    width: auto;
+  }
+  .carrito__menu {
+    margin-right: 5px;
+    margin-bottom: 40px;
+    padding: 5%;
+    width: 45%;
+  }
+  .header__logo {
+    display: none;
+  }
+}
