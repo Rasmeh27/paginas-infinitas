@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --fuente--montserrat: "Montserrat", sans-serif;
+  --fuente--krona: "Krona One", sans-serif;
+  --fuente--rubik: "Rubik", sans-serif;
+  --fuente--poppins: "Poppins", sans-serif;
+  --color--primario: #9aa0a7;
+}
+
+.carrito {
+  font-family: var(--fuente--poppins);
+  max-width: 1000px; /* Aumentar el tamaño del contenedor principal */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carrito h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.cart__container {
+  border: 1px solid #ccc;
+  padding: 20px; /* Aumentar el padding del contenedor del carrito */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#carrito__menu__productos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#carrito__menu__productos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0; /* Aumentar el padding para mejor espaciado */
+  border-bottom: 1px solid #ddd;
+}
+
+#carrito__menu__productos li:last-child {
+  border-bottom: none;
+}
+
+#carrito__menu__productos img {
+  width: 200px;
+  max-width: 150px; /* Aumentar el tamaño de la imagen */
+  height: auto;
+  margin-right: 20px;
+}
+
+.cart__total {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.boton__eliminar {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.boton__eliminar:hover {
+  color: red;
+}
+
+#carrito__total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#carrito__comprar {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#carrito__comprar:hover {
+  background-color: gray;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/logo.png" class="header__logo">
+        <nav class="header__menu">
+            <div class="header__menu__options">
+                <a href="/index.html" class="header__menu__link"><img src="/images/Icons/home.png" alt="home"
+                        class="icon"></a>
+            </div>
+            <a href="/catalogo.html" class="header__menu__link">Ver catálogo</a>
+
+            <!-- Shopping Cart Structure -->
+            <a class="header__menu__link" id="carrito">
+                <img src="/images/Icons/shopping-cart.png" class="icon">
+            </a>
+            <div class="carrito__menu" id="carrito__menu">
+                <h3><a href="/carrito.html" class="carrito__titulo">Productos en carrito</a></h3>
+                <ul id="carrito__menu__productos"></ul>
+                <p id="carrito__total">Total: $0.00</p>
+                <button id="carrito__comprar">Comprar</button>
+                <button id="carrito__cerrar">X</button>
+            </div>
+    </header>
+    <hr>
+    <br>
+    <h1>Perfil del Usuario</h1>
+    <div class="container">
+        <section class="profile__section">
+            <h2>Informacion personal</h2>
+            <p>Nombre:</p>
+            <p>Correo electronico:</p>
+            <p>Codigo postal:</p>
+            <button class="profile__section__button">Editar informacion</button>
+        </section>
+
+        <section class="profile__section">
+            <h2>Historial de compras</h2>
+            <p>Pedido: #</p>
+            <button class="profile__section__button">Ver mas</button>
+        </section>
+
+        <section class="profile__section">
+            <h2>Lista de deseos</h2>
+            <p>Libro:</p>
+            <button class="profile__section__button">Gestionar Lista de Deseos</button>
+        </section>
+
+        <section class="profile__section">
+            <h2>Metodo de pago</h2>
+            <p>Tarjeta:</p>
+            <button class="profile__section__button">Gestionar Metodo de Pago</button>
+        </section>
+    </div>
+
+    <hr class="divider">
+    <footer class="footer">
+        <p class="footer__redes">Redes sociales:</p>
+        <a href="https://github.com/Rasmeh27">
+            <img src="images/Icons/github.png" class="footer__img">
+        </a>
+        <a href="https://www.instagram.com/luis_h.r_/">
+            <img src="images/Icons/logotipo-de-instagram.png" class="footer__img">
+        </a>
+        <p class="footer__marca">Desarrollado por &copy;Luis Herasme</p>
+    </footer>
+</body>
+
+</html>

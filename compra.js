@@ -118,12 +118,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const carritoMenu = document.getElementById('carrito__menu');
     const carritoProductos = document.getElementById('carrito__menu__productos');
     const carritoTotal = document.getElementById('carrito__total');
+    const carritoComprar = document.getElementById('carrito__comprar');
     let productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
     let total = 0;
 
     carrito.addEventListener('click', function () {
         carritoMenu.style.display = carritoMenu.style.display === 'block' ? 'none' : 'block';
     });
+
+    // Cerrar ventana
+    const botonCerrar = document.getElementById('carrito__cerrar');
+    botonCerrar.textContent = 'x';
+    botonCerrar.onclick = function () {
+        carritoMenu.style.display = 'none';
+    };
 
     window.addShoppingCart = async function (nombre, precio, imagen) {
         const producto = {
@@ -160,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
             span.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
 
             const botonEliminar = document.createElement('button');
-            botonEliminar.innerHTML = '<i class="fas fa-times"></i>';
+            botonEliminar.innerHTML = '<i class="fas fa-trash"></i>';
             botonEliminar.onclick = function () {
                 productosEnCarrito.splice(index, 1);
                 actualizarCarrito();
@@ -175,6 +183,25 @@ document.addEventListener("DOMContentLoaded", function () {
         carritoTotal.textContent = `Total: $${total.toFixed(2)}`;
         localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
     }
+
+    // Evento de compra
+    carritoComprar.onclick = function () {
+        if (productosEnCarrito.length > 0) {
+            Swal.fire({
+                title: "Compra realizada",
+                text: `Has comprado ${productosEnCarrito.length} productos por un total de $${total.toFixed(2)}`,
+                icon: "success"
+            });
+            productosEnCarrito = [];
+            actualizarCarrito();
+        } else {
+            Swal.fire({
+                title: "Carrito vacío",
+                text: "No tienes productos en el carrito para comprar",
+                icon: "error"
+            });
+        }
+    };
 
     actualizarCarrito();
 });
